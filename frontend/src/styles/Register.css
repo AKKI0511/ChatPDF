@@ -1,0 +1,27 @@
+/* Register component CSS */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff; /* Light text color */
+  }
+  
+  .register-content {
+    width: 70%; /* Adjust width percentage as needed */
+    max-width: 400px; /* Add a max-width for better responsiveness */
+  }
+  
+  .register-link {
+    color: #007bff; /* Link text color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .register-link:hover {
+    color: #0056b3; /* Link hover color */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
