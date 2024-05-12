@@ -5,6 +5,8 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
+import CreatePDF from "./pages/Createpdf";
+import EditPDF from "./pages/Editpdf";
 
 function Logout() {
   localStorage.clear();
@@ -20,6 +22,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/register" element={<RegisterAndLogout />} />
         <Route
           path="/"
           element={
@@ -28,9 +33,22 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/register" element={<RegisterAndLogout />} />
+        <Route
+          path="/generate-pdf"
+          element={
+            <ProtectedRoute>
+              <CreatePDF />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/edit-pdf"
+          element={
+            <ProtectedRoute>
+              <EditPDF />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

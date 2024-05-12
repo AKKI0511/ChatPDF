@@ -1,0 +1,18 @@
+/* BackButton.css */
+
+.back-button {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid white;
+    border-radius: 50%; /* Make the button round */
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.back-button:hover {
+    color: #000;
+    background-color: #fff;
+}

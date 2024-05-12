@@ -9,10 +9,13 @@ function Login() {
         navigate("/register");
     };
     return (
-        <div className="login-container"> {/* Add the login-container class */}
-            <Form route="/api/token/" method="login" />
-            <div className="button-container"> {/* Add the button-container class */}
-                <button className="form-btn" onClick={register}>Register</button>
+        <div className="login-container">
+            <div className="login-content">
+                <h1>Welcome to ChatPDF</h1>
+                <Form route="/api/token/" method="login" />
+                <div>
+                    Don't have an account? <button className="register-btn" onClick={register}>Register</button>
+                </div>
             </div>
         </div>
     );

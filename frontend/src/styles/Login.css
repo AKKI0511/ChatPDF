@@ -1,98 +1,36 @@
-/* Dark-themed login page CSS with improved button and link styles */
+/* Login.css */
+
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    background-color: #1f1f1f;
-    /* Dark background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
     color: #fff;
-    /* Light text color */
 }
 
-.form-container {
-    width: 300px;
-    /* Adjust width as needed */
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #333;
-    /* Dark form background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
+.login-content {
+    text-align: center;
 }
 
-.form-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #555;
-    /* Dark input background color */
-    color: #fff;
-    /* Light text color */
-}
-
-.form-input::placeholder {
-    color: #ccc;
-    /* Placeholder text color */
-}
-
-.form-btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    /* Button background color */
-    color: #fff;
-    /* Button text color */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.form-btn:hover {
-    background-color: #0056b3;
-    /* Button hover background color */
+.login-content h1 {
+    margin-bottom: 20px;
 }
 
 .register-link {
-    margin-top: 10px;
-    color: #007bff;
-    /* Link text color */
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.register-link:hover {
-    color: #0056b3;
-    /* Link hover color */
-    text-decoration: underline;
-    /* Underline on hover */
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between;
     margin-top: 20px;
+    font-size: 14px;
 }
 
-.button-container button {
-    flex: 1;
-    padding: 10px;
-    margin-right: 5px;
+.register-btn {
+    background-color: transparent;
+    color: #007bff;
     border: none;
-    border-radius: 5px;
-    background-color: #dc3545;
-    /* Button background color */
-    color: #fff;
-    /* Button text color */
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.button-container button:hover {
-    background-color: #c82333;
-    /* Button hover background color */
+.register-btn:hover {
+    text-decoration: underline;
 }
+
+/* Additional styles for Form component (if needed) */

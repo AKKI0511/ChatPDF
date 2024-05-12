@@ -1,0 +1,85 @@
+/* Dashboard.css */
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* Edit/Create page Cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0; 
+    color: #1a1a1a;
+}
+
+.card>div {
+    cursor: pointer;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+
+/* Logout button */
+.logout-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
