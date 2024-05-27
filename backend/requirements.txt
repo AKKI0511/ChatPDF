@@ -8,3 +8,9 @@ pytz
 sqlparse
 psycopg2-binary
 python-dotenv
+reportlab
+markdown2
+pygments
+beautifulsoup4
+langchain-core
+langchain-groq
