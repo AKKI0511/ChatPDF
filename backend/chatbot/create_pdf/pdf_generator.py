@@ -319,16 +319,19 @@ def parse_html(html_content: str, custom_style: ParagraphStyle, formatting_kwarg
 
 
 def generate_pdf_from_description(description: str) -> str:
-    try:
-        content_description, formatting_instructions = extract_formatting_and_content(description)
-        initial_content = create_content(content_description)
-        refined_content = refine_content_and_structure(initial_content, content_description)
-        formatting_kwargs = generate_formatting_kwargs(formatting_instructions)
-        pdf_path = create_pdf(refined_content, formatting_kwargs)
-        return pdf_path
-    except ValueError as e:
-        print(f'Error: {e}')
-        return ''
+    count = 0
+    while count < 5:
+        try:
+            content_description, formatting_instructions = extract_formatting_and_content(description)
+            initial_content = create_content(content_description)
+            refined_content = refine_content_and_structure(initial_content, content_description)
+            formatting_kwargs = generate_formatting_kwargs(formatting_instructions)
+            pdf_path = create_pdf(refined_content, formatting_kwargs)
+            return pdf_path
+        except ValueError as e:
+            print(f'Error {count}: {e}')
+        count += 1
+    return ""
 
 # def main() -> None:
 #     """
