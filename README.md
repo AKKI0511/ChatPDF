@@ -85,7 +85,7 @@ To set up the project locally, follow these steps:
 ## Usage
 
 1. **Access the Application**
-   - Open your web browser and navigate to `http://localhost:8000` to start using ChatPDFan.
+   - Open your web browser and navigate to `http://localhost:8000` to start using ChatPDF.
 
 2. **Text to PDF Generator**
    - Use the interface to describe what the new PDF should contain, including custom formatting such as background color, font size, etc.
@@ -103,8 +103,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Django](https://www.djangoproject.com/)
 - [React](https://reactjs.org/)
-- [LangChain](https://github.com/langchain/langchain)
-- [LangGraph](https://github.com/langgraph/langgraph)
+- [LangChain]([https://github.com/langchain/langchain](https://python.langchain.com/v0.2/docs/introduction/))
+- [LangGraph]([https://github.com/langgraph/langgraph](https://langchain-ai.github.io/langgraph/))
 
 ## Note
 
