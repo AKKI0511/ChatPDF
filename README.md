@@ -33,7 +33,7 @@ ChatPDFan is an advanced web application designed to provide an extensive toolki
 ### Backend
 - **Django**: A high-level Python web framework that encourages rapid development and clean, pragmatic design.
 - **LangChain**: A library for developing applications powered by language models.
-- **LangGraph**: A tool for managing and deploying large language models.
+- **LangGraph**: A library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows.
 
 ### Frontend
 - **React**: A JavaScript library for building user interfaces.
@@ -103,8 +103,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Django](https://www.djangoproject.com/)
 - [React](https://reactjs.org/)
-- [LangChain]([https://github.com/langchain/langchain](https://python.langchain.com/v0.2/docs/introduction/))
-- [LangGraph]([https://github.com/langgraph/langgraph](https://langchain-ai.github.io/langgraph/))
+- [LangChain](https://python.langchain.com/v0.2/docs/introduction/)
+- [LangGraph](https://www.langchain.com/langgraph)
 
 ## Note
 
