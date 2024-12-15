@@ -1,6 +1,6 @@
-# ChatPDFan AI-PDF Toolkit
+# ChatPDF AI-PDF Toolkit
 
-ChatPDFan is an advanced web application designed to provide an extensive toolkit for interacting with PDFs. Built using Django for the backend and React for the frontend, ChatPDFan leverages state-of-the-art AI technologies, including LangChain and LangGraph with Large Language Models (LLMs).
+ChatPDF is an advanced web application designed to provide an extensive toolkit for interacting with PDFs. Built using Django for the backend and React for the frontend, ChatPDF leverages state-of-the-art AI technologies, including LangChain and LangGraph with Large Language Models (LLMs).
 
 ## Main Use Cases
 
