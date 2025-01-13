@@ -1,16 +1,16 @@
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Image, ListFlowable, ListItem, Table, TableStyle, HRFlowable, XPreformatted
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from langchain_core.prompts import ChatPromptTemplate
-from pygments.formatters import HtmlFormatter
 from reportlab.lib.pagesizes import letter
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
-from pygments.lexers import get_lexer_by_name
-from typing import Tuple, Dict, List
-from langchain_groq import ChatGroq
+from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.units import mm
 from reportlab.lib import colors
-from django.conf import settings
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_groq import ChatGroq
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import get_lexer_by_name
 from pygments import highlight
+from typing import Tuple, Dict, List, Any
+from django.conf import settings
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import markdown2
@@ -51,7 +51,7 @@ def extract_formatting_and_content(input_text: str) -> Tuple[str, str]:
     human = "Separate the formatting instructions and the content description from the following input:\n\n{text}\n\nFormatting Instructions:\nContent Description:"
 
     prompt = ChatPromptTemplate.from_messages([("system", system), ("human", human)])
-    chain = prompt | llm_mixtral
+    chain = prompt | llm_llama
     response = chain.invoke({"text": input_text})
     result = response.content.strip()
     print(f"LLM-1:\n\n{result}")
@@ -162,7 +162,7 @@ def generate_formatting_kwargs(formatting_instructions: str) -> Dict[str, str]:
         return {}
 
 
-def create_pdf(content: str, formatting_kwargs: Dict[str, str]) -> None:
+def create_pdf(content: str, formatting_kwargs: Dict[str, Any]) -> str:
     """
     Creates a PDF document based on the provided content and formatting arguments.
 
@@ -228,7 +228,7 @@ def create_pdf(content: str, formatting_kwargs: Dict[str, str]) -> None:
 
         doc.build(elements, onFirstPage=add_background, onLaterPages=add_background)
         print(f"PDF has been created successfully at {pdf_url}.")
-        return pdf_url
+        return pdf_path
     except Exception as e:
         print(f"An error occurred while creating the PDF: {e}")
         return ""

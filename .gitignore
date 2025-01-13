@@ -1,5 +1,7 @@
 backend/media/
 backend/db.sqlite3
+backend/chatbot/migrations/__pycache__/
+backend/chatbot/migrations/*.pyc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
