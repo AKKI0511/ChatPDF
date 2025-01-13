@@ -14,3 +14,12 @@ pygments
 beautifulsoup4
 langchain-core
 langchain-groq
+PyPDF2
+langchain
+pymupdf
+bs4
+pdfplumber
+pdfkit
+pdf2docx
+python-docx
+docx2pdf
